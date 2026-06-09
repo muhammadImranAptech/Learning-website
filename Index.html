@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO: Title Tag -->
+  <title>Learn New Skills Online for Adults in Karachi | SkillUp with Ali</title>
+
+  <!-- SEO: Meta Description -->
+  <meta name="description" content="SkillUp with Ali – a simple online learning site made for adults in Karachi who want to grow their skills after work. Real courses, real results, no fancy stuff.">
+  <meta name="keywords" content="online learning for adults Karachi, skill development courses Pakistan, professional courses online, learn from home Karachi">
+  <meta name="author" content="Ali Hassan">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.skillupwithali.com/online-courses-for-adults">
+
+  <!-- Fonts: deliberately picked slightly "student-ish" combo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #FFE566;
+      --yellow-dark: #f5d800;
+      --blue: #2563EB;
+      --blue-light: #DBEAFE;
+      --green: #16a34a;
+      --green-light: #DCFCE7;
+      --pink: #EC4899;
+      --pink-light: #FCE7F3;
+      --orange: #EA580C;
+      --orange-light: #FFEDD5;
+      --bg: #FFFDF4;
+      --paper: #FFFFFF;
+      --ink: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      /* subtle notebook lines */
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 27px,
+        #e8e0cc 27px,
+        #e8e0cc 28px
+      );
+    }
+
+    /* ── handwritten squiggle underline ── */
+    .squiggle {
+      position: relative; display: inline;
+    }
+    .squiggle::after {
+      content: '';
+      position: absolute; left: 0; bottom: -4px;
+      width: 100%; height: 6px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='6'%3E%3Cpath d='M0 3 Q10 0 20 3 Q30 6 40 3 Q50 0 60 3 Q70 6 80 3 Q90 0 100 3' stroke='%23FFE566' stroke-width='3' fill='none'/%3E%3C/svg%3E")
+      repeat-x center;
+    }
+
+    /* ══════════════════════════
+       NAVBAR
+    ══════════════════════════ */
+    nav {
+      background: var(--paper);
+      border-bottom: 2px solid var(--ink);
+      padding: 0 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 62px;
+      position: sticky; top: 0; z-index: 100;
+      /* tiny drop shadow like taped paper */
+      box-shadow: 0 3px 0 var(--yellow);
+    }
+    .nav-logo {
+      font-family: 'Caveat', cursive;
+      font-size: 1.65rem; font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span {
+      background: var(--yellow);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 2px;
+    }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.92rem; font-weight: 700;
+      color: var(--ink); text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .nav-links a:hover { border-color: var(--blue); }
+    .nav-btn {
+      background: var(--ink); color: #fff;
+      padding: 0.45rem 1.2rem; border-radius: 6px;
+      font-weight: 800; font-size: 0.85rem;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: var(--yellow); color: var(--ink); }
+
+    /* ══════════════════════════
+       HERO  — looks like a student made a poster
+    ══════════════════════════ */
+    .hero {
+      padding: 70px 6% 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--paper);
+      border-bottom: 2px solid var(--ink);
+      position: relative;
+    }
+
+    /* tape strips in corners */
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      width: 60px; height: 18px;
+      background: rgba(255,229,102,0.75);
+      border: 1px solid rgba(0,0,0,0.12);
+      transform: rotate(-4deg);
+    }
+    .hero::before { top: -6px; left: 40px; }
+    .hero::after  { top: -6px; right: 80px; transform: rotate(3deg); }
+
+    .hero-label {
+      display: inline-block;
+      background: var(--green-light);
+      border: 1.5px solid var(--green);
+      color: var(--green);
+      font-size: 0.75rem; font-weight: 800;
+      padding: 0.25rem 0.8rem; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      margin-bottom: 1.2rem;
+    }
+
+    /* SEO H1 */
+    .hero h1 {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+    .highlight-box {
+      background: var(--yellow);
+      padding: 2px 6px;
+      border-radius: 3px;
+      display: inline;
+    }
+
+    .hero-desc {
+      font-size: 1.02rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      /* slight imperfection: not perfectly aligned */
+      max-width: 460px;
+    }
+    .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .btn-main {
+      background: var(--blue);
+      color: #fff;
+      padding: 0.75rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 800; font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid var(--blue);
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-block;
+    }
+    .btn-main:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 var(--ink); }
+    .btn-sec {
+      background: transparent;
+      color: var(--ink);
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      transition: background 0.15s;
+    }
+    .btn-sec:hover { background: var(--yellow); }
+
+    /* sticky-note style card on right */
+    .hero-card {
+      background: var(--yellow);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 2rem;
+      box-shadow: 6px 6px 0 var(--ink);
+      position: relative;
+      transform: rotate(1.5deg);
+    }
+    .hero-card::before {
+      content: '📌';
+      position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.4rem;
+    }
+    .hero-card-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.4rem; font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+    .mini-stat { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; }
+    .mini-stat .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--ink); flex-shrink: 0;
+    }
+    .mini-stat span { font-size: 0.9rem; font-weight: 600; }
+    .hand-note {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      color: #555;
+      border-top: 1px dashed #aaa;
+      padding-top: 0.8rem;
+    }
+
+    /* ══════════════════════════
+       SECTION WRAPPERS
+    ══════════════════════════ */
+    .section { padding: 70px 6%; }
+    .section-alt { background: var(--paper); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border); }
+
+    .sec-eyebrow {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    /* SEO H2 */
+    .sec-h2 {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      line-height: 1.25;
+    }
+    .sec-p {
+      font-size: 0.98rem; color: var(--muted);
+      max-width: 540px; line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ══════════════════════════
+       COURSES
+    ══════════════════════════ */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .c-card {
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .c-card:hover { transform: translate(-3px,-3px); box-shadow: 6px 6px 0 var(--ink); }
+
+    .c-top {
+      height: 140px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem;
+      border-bottom: 2px solid var(--ink);
+      position: relative;
+    }
+    .ct-1 { background: #DBEAFE; }
+    .ct-2 { background: #DCFCE7; }
+    .ct-3 { background: #FCE7F3; }
+    .ct-4 { background: #FFEDD5; }
+    .ct-5 { background: #F3E8FF; }
+    .ct-6 { background: #FEF9C3; }
+
+    .c-tag {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--ink); color: #fff;
+      font-size: 0.68rem; font-weight: 800;
+      padding: 2px 8px; border-radius: 3px;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+
+    .c-body { padding: 1.2rem; }
+    /* SEO H3 */
+    .c-body h3 {
+      font-size: 1.05rem; font-weight: 800;
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+    .c-body p {
+      font-size: 0.84rem; color: var(--muted);
+      line-height: 1.6; margin-bottom: 1rem;
+    }
+    .c-meta {
+      display: flex; gap: 0.8rem; flex-wrap: wrap;
+      font-size: 0.76rem; color: var(--muted);
+      margin-bottom: 1rem; font-weight: 600;
+    }
+    .c-footer { display: flex; align-items: center; justify-content: space-between; }
+    .c-price { font-weight: 800; font-size: 1.05rem; color: var(--green); }
+    .c-btn {
+      background: var(--ink); color: #fff;
+      padding: 0.4rem 1rem; border-radius: 5px;
+      font-size: 0.8rem; font-weight: 700;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      transition: background 0.15s, color 0.15s;
+    }
+    .c-btn:hover { background: var(--yellow); color: var(--ink); }
+
+    /* ══════════════════════════
+       STICKY NOTES — WHY SECTION
+    ══════════════════════════ */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+    .sticky {
+      padding: 1.6rem 1.4rem;
+      border-radius: 2px;
+      border: 1.5px solid rgba(0,0,0,0.1);
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.08);
+      position: relative;
+      /* slight random tilt for each */
+    }
+    .sticky:nth-child(odd)  { transform: rotate(-1deg); }
+    .sticky:nth-child(even) { transform: rotate(0.8deg); }
+    .sticky:hover { transform: rotate(0deg) scale(1.03); z-index: 2; }
+
+    .s-yellow { background: #FFF9C4; }
+    .s-green  { background: #D0F0C0; }
+    .s-pink   { background: #FFD6E0; }
+    .s-blue   { background: #C8E6F9; }
+    .s-orange { background: #FFE0B2; }
+    .s-purple { background: #E8D5FB; }
+
+    .sticky-icon { font-size: 1.8rem; margin-bottom: 0.7rem; display: block; }
+    /* SEO H3 in sticky */
+    .sticky h3 {
+      font-family: 'Caveat', cursive;
+      font-size: 1.15rem; font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .sticky p { font-size: 0.84rem; line-height: 1.6; color: #444; }
+
+    /* ══════════════════════════
+       HOW IT WORKS — checklist style
+    ══════════════════════════ */
+    .steps-list { max-width: 640px; }
+    .step-item {
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      margin-bottom: 2rem;
+      padding: 1.4rem;
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 var(--yellow);
+      transition: transform 0.15s;
+    }
+    .step-item:hover { transform: translate(-2px,-2px); }
+    .step-num {
+      font-family: 'Caveat', cursive;
+      font-size: 2rem; font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .step-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .step-item p  { font-size: 0.86rem; color: var(--muted); line-height: 1.6; }
+
+    /* ══════════════════════════
+       CATEGORIES — tag cloud
+    ══════════════════════════ */
+    .cat-cloud { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .cat-tag {
+      padding: 0.45rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.85rem; font-weight: 700;
+      text-decoration: none; color: var(--ink);
+      border: 2px solid var(--ink);
+      transition: all 0.15s;
+      display: inline-block;
+    }
+    .cat-tag:hover { background: var(--ink); color: #fff; }
+    .cat-tag.y { background: var(--yellow); }
+    .cat-tag.b { background: var(--blue-light); }
+    .cat-tag.g { background: var(--green-light); }
+    .cat-tag.p { background: var(--pink-light); }
+    .cat-tag.o { background: var(--orange-light); }
+
+    /* ══════════════════════════
+       TESTIMONIALS
+    ══════════════════════════ */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.4rem;
+    }
+    .t-card {
+      background: var(--paper);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 1.6rem;
+      position: relative;
+    }
+    .t-quote {
+      font-family: 'Caveat', cursive;
+      font-size: 3rem;
+      line-height: 0.8;
+      color: var(--yellow-dark);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .t-text { font-size: 0.93rem; line-height: 1.7; color: var(--ink); margin-bottom: 1.2rem; }
+    .t-stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.8rem; letter-spacing: 2px; }
+    .t-author { display: flex; align-items: center; gap: 0.8rem; }
+    .t-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--yellow);
+      border: 2px solid var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .t-name { font-weight: 800; font-size: 0.88rem; }
+    .t-role { font-size: 0.76rem; color: var(--muted); }
+
+    /* ══════════════════════════
+       ABOUT ME — personal touch
+    ══════════════════════════ */
+    .about-section {
+      background: var(--blue);
+      color: #fff;
+      padding: 70px 6%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    }
+    .about-section .sec-eyebrow { color: rgba(255,255,255,0.6); }
+    .about-section .sec-h2 { color: #fff; }
+    .about-section .sec-p { color: rgba(255,255,255,0.75); max-width: none; }
+    .about-img-box {
+      background: var(--yellow);
+      border: 3px solid #fff;
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+      transform: rotate(-2deg);
+    }
+    .about-emoji { font-size: 5rem; display: block; margin-bottom: 1rem; }
+    .about-name {
+      font-family: 'Caveat', cursive;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--ink);
+    }
+    .about-title-tag { font-size: 0.82rem; color: #555; margin-top: 0.3rem; font-weight: 600; }
+
+    /* ══════════════════════════
+       CTA BANNER
+    ══════════════════════════ */
+    .cta-band {
+      background: var(--yellow);
+      border-top: 3px solid var(--ink);
+      border-bottom: 3px solid var(--ink);
+      padding: 60px 6%;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700; margin-bottom: 1rem; color: var(--ink);
+    }
+    .cta-band p { font-size: 1rem; color: #555; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    /* ══════════════════════════
+       FOOTER
+    ══════════════════════════ */
+    footer {
+      background: var(--ink); color: rgba(255,255,255,0.7);
+      padding: 50px 6% 25px;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 2.5rem; margin-bottom: 2.5rem;
+    }
+    .f-logo {
+      font-family: 'Caveat', cursive;
+      font-size: 1.5rem; font-weight: 700;
+      color: #fff; display: block; margin-bottom: 0.8rem;
+    }
+    .f-logo span {
+      background: var(--yellow);
+      color: var(--ink);
+      padding: 1px 6px; border-radius: 3px;
+    }
+    .f-desc { font-size: 0.86rem; line-height: 1.7; }
+    .f-col h4 { color: #fff; font-weight: 800; font-size: 0.88rem; margin-bottom: 1rem; }
+    .f-col ul { list-style: none; }
+    .f-col ul li { margin-bottom: 0.5rem; }
+    .f-col ul li a {
+      color: rgba(255,255,255,0.55); font-size: 0.84rem;
+      text-decoration: none; transition: color 0.15s;
+    }
+    .f-col ul li a:hover { color: var(--yellow); }
+    .f-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem;
+    }
+    /* lil handwritten note in footer */
+    .f-hand {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--yellow);
+    }
+
+    /* ══════════════════════════
+       MOBILE RESPONSIVE  (SEO Task 9)
+    ══════════════════════════ */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-card { transform: rotate(0); }
+      .about-section { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+      nav { padding: 0 4%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ░░ NAV ░░ -->
+<nav>
+  <div class="nav-logo">SkillUp <span>Muhammad</span></div>
+  <ul class="nav-links">
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#why-us">Why Us?</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#about">About Me</a></li>
+  </ul>
+  <a href="#enroll" class="nav-btn">Start Learning →</a>
+</nav>
+
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+  <div>
+    <span class="hero-label">✅ Free First Lesson for Everyone</span>
+
+    <!-- SEO H1 with keyword -->
+    <h1>
+      Grow Your Skills with<br>
+      <span class="highlight-box">Online Learning</span><br>
+      for Adults in Karachi
+    </h1>
+
+    <!-- SEO: natural keyword use -->
+    <p class="hero-desc">
+      Hey! I'm Muhammad. I made this site for people like me — working adults in Karachi who want to learn new skills but don't have time for big university programs. Simple, affordable, and actually useful.
+    </p>
+    <div class="hero-btns">
+      <a href="#courses" class="btn-main">See All Courses</a>
+      <a href="#how" class="btn-sec">How Does It Work?</a>
+    </div>
+  </div>
+
+  <!-- sticky note -->
+  <div class="hero-card">
+    <div class="hero-card-title">Quick Numbers 📊</div>
+    <div class="mini-stat"><div class="dot"></div><span>9,400+ adult students enrolled</span></div>
+    <div class="mini-stat"><div class="dot"></div><span>75+ courses available</span></div>
+    <div class="mini-stat"><div class="dot"></div><span>Certificate on completion</span></div>
+    <div class="mini-stat"><div class="dot"></div><span>Works on mobile + desktop</span></div>
+    <div class="mini-stat"><div class="dot"></div><span>Prices start at PKR 2,500</span></div>
+    <div class="hand-note">started this in 2022 from my bedroom 😅</div>
+  </div>
+</section>
+
+
+<!-- ░░ COURSES ░░ -->
+<section class="section section-alt" id="courses">
+  <span class="sec-eyebrow">// what we teach</span>
+  <!-- SEO H2 -->
+  <h2 class="sec-h2">Courses for Working Adults in Karachi</h2>
+  <p class="sec-p">
+    All courses are self-paced, so you can study after work, on weekends — whenever. No fixed schedule, no pressure.
+  </p>
+
+  <div class="courses-grid">
+
+    <article class="c-card">
+      <div class="c-top ct-1">
+        <!-- SEO: alt text on image -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E💻%3C/text%3E%3C/svg%3E"
+             alt="Digital marketing and SEO course for adults in Karachi" width="70" height="70">
+        <span class="c-tag">Popular</span>
+      </div>
+      <div class="c-body">
+        <!-- SEO H3 -->
+        <h3>Digital Marketing & SEO</h3>
+        <p>Learn Google SEO, social media ads, email marketing — everything to grow a business online.</p>
+        <div class="c-meta">
+          <span>⏱ 38 hrs</span>
+          <span>📚 11 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 4,200</div>
+          <!-- SEO: clean URL internal link -->
+          <a href="/courses/digital-marketing-seo-karachi" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <div class="c-top ct-2">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E📊%3C/text%3E%3C/svg%3E"
+             alt="MS Excel and data analysis course for beginners adults"
+             width="70" height="70">
+        <span class="c-tag">Beginner</span>
+      </div>
+      <div class="c-body">
+        <h3>MS Excel & Data Analysis</h3>
+        <p>From basic formulas to pivot tables and charts — the skill every office worker needs in 2025.</p>
+        <div class="c-meta">
+          <span>⏱ 22 hrs</span>
+          <span>📚 8 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 2,800</div>
+          <a href="/courses/excel-data-analysis-adults" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <div class="c-top ct-3">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E🗣️%3C/text%3E%3C/svg%3E"
+             alt="English speaking and communication skills course Karachi adults"
+             width="70" height="70">
+        <span class="c-tag">Top Rated</span>
+      </div>
+      <div class="c-body">
+        <h3>Spoken English for Professionals</h3>
+        <p>Build confidence in meetings, interviews, and emails. Designed for Karachi's working adults.</p>
+        <div class="c-meta">
+          <span>⏱ 26 hrs</span>
+          <span>📚 9 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 3,500</div>
+          <a href="/courses/spoken-english-professionals-karachi" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <div class="c-top ct-4">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E🖥️%3C/text%3E%3C/svg%3E"
+             alt="Python coding course for beginners adult learners Pakistan"
+             width="70" height="70">
+        <span class="c-tag">New</span>
+      </div>
+      <div class="c-body">
+        <h3>Python for Absolute Beginners</h3>
+        <p>Start coding with Python — the most useful language for automation, data, and freelancing.</p>
+        <div class="c-meta">
+          <span>⏱ 48 hrs</span>
+          <span>📚 14 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 5,800</div>
+          <a href="/courses/python-beginners-adults-pakistan" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <div class="c-top ct-5">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E🎨%3C/text%3E%3C/svg%3E"
+             alt="Freelance graphic design course Canva Photoshop for adults"
+             width="70" height="70">
+        <span class="c-tag">Beginner</span>
+      </div>
+      <div class="c-body">
+        <h3>Freelance Graphic Design</h3>
+        <p>Design logos, posts, and client work using Canva & Photoshop. Start earning as a freelancer.</p>
+        <div class="c-meta">
+          <span>⏱ 30 hrs</span>
+          <span>📚 10 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 3,900</div>
+          <a href="/courses/freelance-graphic-design-canva" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <div class="c-top ct-6">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext y='55' font-size='55'%3E💼%3C/text%3E%3C/svg%3E"
+             alt="Project management and leadership training for working adults Karachi"
+             width="70" height="70">
+        <span class="c-tag">Advanced</span>
+      </div>
+      <div class="c-body">
+        <h3>Project Management Basics</h3>
+        <p>Learn how to manage projects, lead small teams, and handle deadlines — useful in any industry.</p>
+        <div class="c-meta">
+          <span>⏱ 35 hrs</span>
+          <span>📚 12 modules</span>
+          <span>🏆 Certificate</span>
+        </div>
+        <div class="c-footer">
+          <div class="c-price">PKR 4,800</div>
+          <a href="/courses/project-management-adults-karachi" class="c-btn">Enroll →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ░░ CATEGORIES ░░ -->
+<section class="section" id="categories">
+  <span class="sec-eyebrow">// browse by topic</span>
+  <h2 class="sec-h2">All Learning Categories</h2>
+  <p class="sec-p">Not sure where to start? Pick a topic that interests you.</p>
+  <div class="cat-cloud">
+    <!-- SEO: clean URLs, internal links -->
+    <a href="/categories/technology" class="cat-tag y">💻 Technology</a>
+    <a href="/categories/business" class="cat-tag b">📈 Business</a>
+    <a href="/categories/english" class="cat-tag g">🗣️ English</a>
+    <a href="/categories/design" class="cat-tag p">🎨 Design</a>
+    <a href="/categories/finance" class="cat-tag o">💰 Finance</a>
+    <a href="/categories/data-science" class="cat-tag b">📊 Data Science</a>
+    <a href="/categories/marketing" class="cat-tag y">📣 Marketing</a>
+    <a href="/categories/freelancing" class="cat-tag g">🧑‍💻 Freelancing</a>
+    <a href="/categories/health" class="cat-tag p">🧘 Health</a>
+    <a href="/categories/writing" class="cat-tag o">✍️ Writing</a>
+    <a href="/categories/photography" class="cat-tag y">📷 Photography</a>
+    <a href="/categories/leadership" class="cat-tag b">🤝 Leadership</a>
+  </div>
+</section>
+
+
+<!-- ░░ WHY US — sticky notes ░░ -->
+<section class="section section-alt" id="why-us">
+  <span class="sec-eyebrow">// why people like it here</span>
+  <h2 class="sec-h2">Why Adults Choose SkillUp</h2>
+  <p class="sec-p">Honestly, I built this for people like me. Here's what makes it different from random YouTube videos.</p>
+  <div class="why-grid">
+    <div class="sticky s-yellow">
+      <span class="sticky-icon">🕐</span>
+      <h3>Learn at Your Own Time</h3>
+      <p>No live classes. Watch whenever — after work, on lunch break, or at 2am if you want.</p>
+    </div>
+    <div class="sticky s-blue">
+      <span class="sticky-icon">📱</span>
+      <h3>Works on Your Phone</h3>
+      <p>The whole site is mobile-friendly. Learn on your phone while commuting in Karachi traffic.</p>
+    </div>
+    <div class="sticky s-green">
+      <span class="sticky-icon">🏆</span>
+      <h3>Real Certificates</h3>
+      <p>Actual certificates you can add to your CV and LinkedIn. Employers in Pakistan recognise them.</p>
+    </div>
+    <div class="sticky s-pink">
+      <span class="sticky-icon">💸</span>
+      <h3>Affordable Prices</h3>
+      <p>Starting from PKR 2,500 only. EasyPaisa and JazzCash accepted. No hidden fees.</p>
+    </div>
+    <div class="sticky s-orange">
+      <span class="sticky-icon">👨‍🏫</span>
+      <h3>Local Pakistani Instructors</h3>
+      <p>All courses taught by people who live and work in Pakistan. They get the local context.</p>
+    </div>
+    <div class="sticky s-purple">
+      <span class="sticky-icon">💬</span>
+      <h3>Student Community</h3>
+      <p>Join WhatsApp groups per course. Ask questions, share wins, stay motivated together.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ HOW IT WORKS ░░ -->
+<section class="section" id="how">
+  <span class="sec-eyebrow">// simple steps</span>
+  <h2 class="sec-h2">How to Get Started</h2>
+  <p class="sec-p">It's really easy. I made the signup process super simple on purpose.</p>
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div>
+        <h3>Create a Free Account</h3>
+        <p>Sign up with just your phone number or email. No credit card needed to register.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div>
+        <h3>Pick a Course</h3>
+        <p>Browse the course list above and choose what you want to learn. Every course has a free first lesson.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div>
+        <h3>Pay & Enroll</h3>
+        <p>Pay through EasyPaisa, JazzCash, or debit card. Instant access after payment.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">04</div>
+      <div>
+        <h3>Learn & Get Certified</h3>
+        <p>Complete the videos and quizzes at your own pace. Download your certificate when you're done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ TESTIMONIALS ░░ -->
+<section class="section section-alt" id="reviews">
+  <span class="sec-eyebrow">// real students</span>
+  <h2 class="sec-h2">What Students Are Saying</h2>
+  <p class="sec-p">I don't pay for fake reviews. These are real messages from real people in Karachi.</p>
+  <div class="testi-grid">
+    <div class="t-card">
+      <span class="t-quote">"</span>
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">Maine digital marketing course kiya aur 2 mahine baad meri salary 30% barh gayi. Muhammad bhai ki wajah se! Shukriya.</p>
+      <div class="t-author">
+        <div class="t-avatar">👩</div>
+        <div>
+          <div class="t-name">Sana K.</div>
+          <div class="t-role">Marketing Assistant, Karachi</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-card">
+      <span class="t-quote">"</span>
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">I tried 3 other platforms but they were too expensive or in pure English. This one actually works for Pakistani adults. The Excel course saved my job lol.</p>
+      <div class="t-author">
+        <div class="t-avatar">👨</div>
+        <div>
+          <div class="t-name">Farhan M.</div>
+          <div class="t-role">Accountant, Karachi</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-card">
+      <span class="t-quote">"</span>
+      <div class="t-stars">★★★★☆</div>
+      <p class="t-text">40 saal ki umar mein Python seekhna pagalpan lagta tha. But the beginner course was so simple. Mujhe ab khud se automation scripts likhni aati hain!</p>
+      <div class="t-author">
+        <div class="t-avatar">👨</div>
+        <div>
+          <div class="t-name">Tariq B.</div>
+          <div class="t-role">Bank Officer, Karachi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ ABOUT — personal section ░░ -->
+<section class="about-section" id="about">
+  <div>
+    <span class="sec-eyebrow">// who made this</span>
+    <h2 class="sec-h2">Hi, I'm Muhammad 👋</h2>
+    <p class="sec-p">
+      I'm a web developer from Karachi who noticed that most online learning for adults in Pakistan is either too expensive, in pure English, or just not practical. So in 2022 I started making courses with local instructors who understand what Pakistani working adults actually need.
+    </p>
+    <p class="sec-p" style="margin-top:-1rem">
+      This site is growing slowly but honestly. If you have questions, you can message me directly on WhatsApp — I reply personally.
+    </p>
+    <a href="/about-ali" class="btn-sec" style="display:inline-block; background:transparent; border-color:#fff; color:#fff; margin-top:0.5rem;">
+      Read My Full Story →
+    </a>
+  </div>
+  <div style="display:flex; justify-content:center;">
+    <div class="about-img-box">
+      <span class="about-emoji">👨‍💻</span>
+      <div class="about-name">Ali Hassan</div>
+      <div class="about-title-tag">Developer & Course Creator, Karachi</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ CTA ░░ -->
+<section class="cta-band" id="enroll">
+  <h2>Ready to Start Learning? 🚀</h2>
+  <p>Join 9,400+ adults in Karachi who are already improving their skills. First lesson is always free.</p>
+  <a href="/register" class="btn-main" style="font-size:1.05rem; padding: 0.9rem 2.2rem;">
+    Create Free Account →
+  </a>
+</section>
+
+
+<!-- ░░ FOOTER ░░ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="f-logo">SkillUp <span>Muhammad</span></span>
+      <!-- SEO keyword in footer -->
+      <p class="f-desc">SkillUp with Muhammad is an online learning platform built for adults in Karachi, Pakistan. Professional skill development courses at prices that make sense.</p>
+    </div>
+    <div class="f-col">
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="/courses/digital-marketing-seo-karachi">Digital Marketing</a></li>
+        <li><a href="/courses/excel-data-analysis-adults">MS Excel</a></li>
+        <li><a href="/courses/spoken-english-professionals-karachi">English Skills</a></li>
+        <li><a href="/courses/python-beginners-adults-pakistan">Python Coding</a></li>
+        <li><a href="/courses/freelance-graphic-design-canva">Graphic Design</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="/about-Muhammad">About Muhammad</a></li>
+        <li><a href="/all-courses">All Courses</a></li>
+        <li><a href="/blog">Study Blog</a></li>
+        <li><a href="/contact">Contact Me</a></li>
+        <li><a href="/student-portal">Student Area</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/payment-info">Payment Info</a></li>
+        <li><a href="/certificates">Certificates</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2025 SkillUp with Muhammad — Online Learning for Adults, Karachi, Pakistan</span>
+    <span class="f-hand">made with chai ☕ and too many late nights</span>
+  </div>
+</footer>
+
+</body>
+</html>
